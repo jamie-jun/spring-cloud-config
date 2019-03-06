@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: spring-cloud-config
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/jamie-jun/spring-cloud-config.git
+          search-paths: resp
+          username:
+          password:
+  zipkin:
+    base-url: http://localhost:9070
+  boot:
+    admin:
+      client:
+        url: http://localhost:9090
+server:
+  port: 8888
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
